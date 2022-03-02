@@ -1,0 +1,31 @@
+body {
+    font-family: $font-body;
+    font-size: 1em;
+    line-height: 2em;
+    background: url('#{$image-path}/bg.gif') $white repeat-x;
+    margin: 0;
+}
+
+main {
+    width: 940px;
+    margin :0 auto;
+    padding: 0 10px;
+
+    @include mediaQuery(959px) {
+        width: 768px;
+    }
+
+    @include mediaQuery(767px) {
+        width: 460px;
+    }
+
+    @include mediaQuery() {
+        width: 300px;
+    }
+}
+
+select {
+    @include mediaQuery() {
+        width: 95%;
+    }
+}

@@ -1,0 +1,76 @@
+$figure-bg: url('#{$image-path}/logo.png') no-repeat 0 50px;
+
+figure {
+    @include colorBlock(400px, 190px, $figure-bg);
+    float: left;
+    display: block;
+    margin: 0;
+
+    @include mediaQuery(959px) {
+        width: inherit;
+        height: 140px;
+        float: none;
+        background-position: center;
+    }
+
+    @include mediaQuery() {
+        background-size: contain;
+        height: 100px;
+    }
+}
+
+/* Create a Sass nested rule for the navigation menu and child elements. */
+nav {
+    width: 540px;
+    height: 190px;
+    float: left;
+    text-align: right;
+
+    ul {
+        list-style-type: none;
+        margin-top: 95px;
+    }
+
+    ul li {
+        display: inline;
+        font-size: 0.8em;
+        margin-right: 10px;
+    }
+
+    ul li a {
+        color: $orange;
+        text-decoration: none;
+        letter-spacing: -0.01em;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    @include mediaQuery(959px) {
+        width: inherit;
+        height: 50px;
+        float: none;
+        text-align: center;
+
+        ul {
+            margin-top: 0;
+        }
+
+        ul li {
+            font-size: 1em;
+            margin: 0 10px;
+        }
+    }
+
+    @include mediaQuery(767px) {
+        ul li {
+            font-size: 0.8em;
+            margin: 0 5px;
+        }
+    }
+
+    @include mediaQuery() {
+        margin-bottom :40px !important;
+    }
+}

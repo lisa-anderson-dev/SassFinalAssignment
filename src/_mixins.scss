@@ -1,0 +1,21 @@
+/* Create at least 3 Sass mixins for all the generic boxes including logo, navigation menu, header, content areas, and footer. */
+
+@mixin colorBlock($width: 100%, $height: auto, $bg: none) {
+    width: $width;
+    height: $height;
+    background: $bg;
+}
+
+@mixin heading($color: $orange, $font-weight: 100, $font-size: 4em, $line-height: 0) {
+    color: $color;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+/* Create a mixin similar to the break() mixin that we built in the video exercises. */
+@mixin mediaQuery($max-width: 459px) {
+    @media (max-width: $max-width) {
+        @content;
+    }
+}

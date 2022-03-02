@@ -1,0 +1,11 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL .json files
+*.json
+
+# ignore ALL .ini files
+*.ini
+
+# ignore ALL files in node_modules directory
+node_modules
